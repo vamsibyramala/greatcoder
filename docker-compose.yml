@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: nginx
+    volumes:
+      - /docker/templates:/etc/nginx/templates
+    ports:
+      - 8081:80
+  
+  database:
+    image: redis
+    volumes:
+      - /docker/myredis:/usr/local/etc/redis
